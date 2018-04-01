@@ -8,6 +8,7 @@ name = "pypi"
 [packages]
 
 awsebcli = "*"
+whitenoise = "*"
 
 
 [dev-packages]

@@ -5,7 +5,7 @@
 gevent==1.2.2
 gunicorn==19.7.1  # https://github.com/benoitc/gunicorn
 boto3==1.6.2  # pyup: update minor  # https://github.com/boto/boto3
-
+whitenoise==3.3.1
 # Django
 # ------------------------------------------------------------------------------
 django-storages==1.6.5  # https://github.com/jschneier/django-storages
