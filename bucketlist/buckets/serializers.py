@@ -4,6 +4,7 @@ from taggit_serializer.serializers import (TagListSerializerField,
                                            TaggitSerializer)
 from bucketlist.users import models as user_models
 
+
 class SmallBucketSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -11,6 +12,7 @@ class SmallBucketSerializer(serializers.ModelSerializer):
         fields = (
             'file',
         )
+
 
 class CountBucketSerializer(serializers.ModelSerializer):
 
@@ -23,6 +25,7 @@ class CountBucketSerializer(serializers.ModelSerializer):
             'like_count'
         )
 
+
 class FeedUserSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -30,6 +33,7 @@ class FeedUserSerializer(serializers.ModelSerializer):
         fields = (
             'name',
         )
+
 
 class CommentSerializer(serializers.ModelSerializer):
 
@@ -43,11 +47,13 @@ class CommentSerializer(serializers.ModelSerializer):
             'creator'
         )
 
+
 class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Like
         fields = '__all__'
+
 
 class LikeSerializer(serializers.ModelSerializer):
 
@@ -56,6 +62,7 @@ class LikeSerializer(serializers.ModelSerializer):
         fields = (
             'creator',
         )
+
 
 class InputBucketSerializer(serializers.ModelSerializer):
 
@@ -94,7 +101,7 @@ class BucketSerializer(TaggitSerializer, serializers.ModelSerializer):
         if 'request' in self.context:
             request = self.context['request']
             try:
-                models.Like.objects.get(creator__id=request.user.id, image__id=obj.id)
+                models.Like.objects.get(creator__id=request.user.id, bucket__id=obj.id)
                 return True
             except models.Like.DoesNotExist:
                 return False

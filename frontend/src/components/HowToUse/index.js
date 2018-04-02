@@ -11,13 +11,13 @@ export default class HowToUse extends React.Component {
                         <h1>버킷리스트에 적은 꿈이 있나요?</h1>
                         <div className="Page1_Contents">
                             <div className="Page1_Content">
-                                <img src={window.location.origin + '/images/card1.jpg'} alt="artist" />
+                                <img src={require('images/card1.jpg')} alt="artist" />
                             </div>
                             <div className="Page1_Content">
-                                <img src={window.location.origin + '/images/card2.jpg'} alt="artist" />
+                                <img src={require('images/card2.jpg')} alt="artist" />
                             </div>
                             <div className="Page1_Content">
-                                <img src={window.location.origin + '/images/card3.jpg'} alt="artist" />
+                                <img src={require('images/card3.jpg')} alt="artist" />
                             </div>
                         </div>
                         
@@ -55,7 +55,7 @@ export default class HowToUse extends React.Component {
                 </Slide>
                 <Slide>
                     <div className="Page3_Content">
-                        <img src={window.location.origin + '/images/page3.jpg'} alt="artist" />
+                        <img src={require('images/page3.jpg')} alt="artist" />
                     </div>
                     <div className="EnrollBtn">
                         등록하러 가기

@@ -44,7 +44,13 @@ function postbucket(username) {
 
 function getBucket(){
     return(dispatch, getState) => {
-        fetch("/buckets/")
+        const {user:{token}}= getState();
+        fetch("/buckets/", {
+            method: "GET",
+            headers: {
+                Authorization: `JWT ${token}`
+            }
+        })
     .then(response => {
         return response.json();
     })

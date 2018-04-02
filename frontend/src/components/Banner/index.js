@@ -56,8 +56,8 @@ class Banner extends Component {
         return (
             <div className="BannerContainer">
                 <Slider {...settings}>
-                    <div className="Content"><a href="https://www.patreon.com/"><img className="BannerImage" src={window.location.origin + '/images/1.jpg'} alt="artist" /></a></div>
-                    <div className="Content"><a href="https://www.patreon.com/"><img className="BannerImage" src={window.location.origin + '/images/2.jpg'} alt="artist" /></a></div>
+                    <div className="Content"><a href="https://www.patreon.com/"><img className="BannerImage" src={require('images/1.jpg')} alt="artist" /></a></div>
+                    <div className="Content"><a href="https://www.patreon.com/"><img className="BannerImage" src={require('images/2.jpg')} alt="artist" /></a></div>
                 </Slider>
             </div>
         );

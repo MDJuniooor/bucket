@@ -8,11 +8,6 @@ urlpatterns = [
         name='all_buckets'
     ),
     url(
-        regex=r'^post/$',
-        view=views.PostBucket.as_view(),
-        name='post_bucket'
-    ),
-    url(
         regex=r'^(?P<bucket_id>[0-9]+)/$',
         view=views.BucketDetail.as_view(),
         name='bucket_detail'
